@@ -24,14 +24,20 @@ vector<int> selectionSort(vector<int>& v) {
 	vector<int>::iterator it;
 
 	for (i=0; i<size; i++) {
+		bool swapped = false;
 		cout << "Once More" << endl << endl;
 		for (j=0; j<size-i-1; j++) {
 			cout << "Before: v[" << j << "]: " << v[j] << ", v[" << j+1 << "]: " << v[j+1] << endl;
 			if (v[j] > v[j+1]) {
+				swapped = true;
 				swap(v, j, j+1);
 				cout << "Swap: v[" << j << "]: " << v[j] << ", v[" << j+1 << "]: " << v[j+1] << endl;
 			}
 			cout << "After: v[" << j << "]: " << v[j] << ", v[" << j+1 << "]: " << v[j+1] << endl << endl;			
+		}
+		if (swapped == false) {
+			cout << "The array is sorted now" << endl;
+			break;
 		}
 	}
 
@@ -40,6 +46,7 @@ vector<int> selectionSort(vector<int>& v) {
 
 int main () {
 	int A[] = {14, 33, 27, 10, 35, 19, 42, 44};
+	//int A[] = {10, 14, 19, 27, 33, 35, 42, 44};
 	vector<int> v (A, A + (sizeof(A)/sizeof(int)));
 	selectionSort(v);
 	print (v);
