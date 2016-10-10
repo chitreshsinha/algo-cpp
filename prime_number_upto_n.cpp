@@ -18,10 +18,10 @@ int main () {
 	primes[1] = 0;
 
 	for(int i=2; i<n+1; i++) {
-		for (int j=2; i*j<n+1; j++) {
-			if (primes[i*j]==1) {
+		if (primes[i] == 1) {
+			for (int j=2; i*j<n+1; j++) {
 				primes[i*j] = 0;
-			}
+			}			
 		}
 	}
 
