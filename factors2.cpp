@@ -9,7 +9,6 @@ int main () {
 	vector <int> v;
 	cout << "Enter the number: ";
 	cin >> n;
-
 	v.push_back(1);
 	v.push_back(n);
 
