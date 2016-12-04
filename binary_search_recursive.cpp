@@ -5,7 +5,7 @@ using namespace std;
 
 int binarySearch(const vector<int> &V, int min, int max, int num) {
 	int mid = (min+max)/2;
-	if(min==max) {
+	if(min>max) {
 		return -1;
 	} else if(V[mid] == num) {
 		return mid;
