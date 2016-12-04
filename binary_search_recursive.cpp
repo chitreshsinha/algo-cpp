@@ -12,7 +12,7 @@ int binarySearch(const vector<int> &V, int min, int max, int num) {
 	}
 
 	if(num < V[mid]) {
-		binarySearch(V, min, mid, num);
+		binarySearch(V, min, mid-1, num);
 	} else {
 		binarySearch(V, mid+1, max, num);
 	}
