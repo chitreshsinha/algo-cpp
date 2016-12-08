@@ -1,59 +1,23 @@
 #include <iostream>
 #include <stack>
-#include <vector>
 
 using namespace std;
 
-/*
-Following properties of a stack are there
-1. empty
-2. push 
-3. pop
-4. top
-5. swap
-*/
-
-bool checkEmpty(const stack<int> &s) {
-	if (s.empty()) {
-		return true;
-	} else {
-		return false;
-	}
-}
-
-
-void printStack(stack <int> &s) {
-	while(!s.empty()) {
-		cout << " " << s.top();
-		s.pop();
-	}
-	cout << endl;
-}
-
-void pushStack(stack <int> &s) {
-	s.push(1);
-	s.push(2);
-	s.push(3);
-	s.push(4);
-	s.push(5);
-}
-
-int printTop(const stack <int> &s) {
-	if (!s.empty()) {
-		return s.top();
-	}
-	return -1;
+void initialization_example(){
+	stack <int> S1;
+	cout << S1.empty() << endl;
+	S1.push(1);
+	cout << S1.empty() << endl;
+	S1.push(2);
+	cout << S1.top() << endl;
+	cout << S1.size() << endl;
+	S1.push(3);
+	cout << S1.top() << endl;
+	S1.pop();
+	cout << S1.top() << endl;
 }
 
 int main() {
-	stack <int> s;
-	cout << "Check empty: " << checkEmpty(s) << endl;
-	printStack(s); 
-	pushStack(s);
-	cout << "Top: " << printTop(s) << endl; 
-	printStack(s);
-	pushStack(s);
-	cout << "Top: " << printTop(s) << endl; 
-	//swapStack(s);
+	initialization_example();
 	return 0;
 }
