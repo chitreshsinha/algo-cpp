@@ -39,6 +39,7 @@ void initialization_example() {
 	map <char, int> M3 {{'x', 1}, {'y', 2}, {'z', 3}};
 	print_using_iterator(M3);
 	cout << "Find: " << (M3.find('y'))->second << endl;
+	cout << M3['z'] << endl;
 }
 
 int main() {
