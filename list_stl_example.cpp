@@ -94,7 +94,7 @@ void initilizations_example(){
 	print_using_iterator(L2);
 
 	list <int> L3 (4, 100);
-	print_using_iterator(L3);	
+	print_using_iterator(L3);
 }
 
 int main() {
