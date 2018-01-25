@@ -24,7 +24,6 @@ int main() {
 		cout << lcm << " " << gcdv << endl;
 		gcdv = gcd(lcm, arr[i]);
 		lcm = (lcm*arr[i])/gcdv;
-
 	}
 	cout << "lcm: " << lcm << endl;
 	return 0;
